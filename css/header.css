@@ -1,0 +1,114 @@
+/*
+font-family: "IBM Plex Serif", serif;
+font-family: "Nunito Sans", sans-serif;
+*/
+
+.header {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header-btn-menu {
+  display: none;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.header-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.header-menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #2A2A2A;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.header-menu ul li a::before {
+  content: '';
+  width: 6px;
+  display: inline-block;
+  transition: .3s;
+  position: relative;
+  top: -3px;
+  right: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.header-menu ul li a:hover::before {
+  content: '';
+  width: 6px;
+  display: inline-block;
+  transition: .3s;
+  position: relative;
+  top: -3px;
+  right: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF4500;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 1200px) {
+  .header-btn-menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header-menu {
+    visibility: visible;
+    position: absolute;
+    top: 90px;
+    flex-direction: column;
+    right: 40px;
+    opacity: 0;
+    gap: 20px;
+    transition: .3s;
+  }
+
+  .header-menu.active {
+    visibility: visible;
+    opacity: 1;
+    background-color: #eee;
+    padding: 40px 40px 40px 10px;
+    border-radius: 20px;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header-actions {
+    align-items: flex-end;
+  }
+}
