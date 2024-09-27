@@ -9,6 +9,7 @@
   if ($sql->rowCount() === 1) {
     $data_user = $sql->fetch();
     $_SESSION['login'] = true;
+    $_SESSION['permission'] = $data_user['permission'];
     $_SESSION['username'] = $data_user['username'];
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
