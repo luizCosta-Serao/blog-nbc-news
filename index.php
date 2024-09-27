@@ -43,6 +43,9 @@
         <?php } else { // Caso esteja logado, exibir user e loggout ?>
           <a href=""><?php echo $_SESSION['username'] ?></a>
           <a class="btn-loggout" href="<?php echo INCLUDE_PATH ?>?loggout">Loggout</a>
+          <?php if($_SESSION['permission'] === 1) { ?>
+            <a href="<?php echo INCLUDE_PATH ?>painel">Painel</a>
+          <?php } ?>
         <?php } ?>
         <a href=""><img src="<?php echo INCLUDE_PATH; ?>/assets/search.svg" alt=""></a>
       </div>

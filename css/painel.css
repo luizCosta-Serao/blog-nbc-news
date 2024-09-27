@@ -1,0 +1,54 @@
+.painel {
+  display: grid;
+  grid-template-columns: 300px auto;
+  gap: 80px;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.painel aside {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.painel aside a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #2A2A2A;
+  font-weight: 500;
+}
+
+.painel aside a::before {
+  content: '';
+  width: 6px;
+  display: inline-block;
+  transition: .3s;
+  position: relative;
+  top: -3px;
+  right: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.painel aside a:hover::before {
+  content: '';
+  width: 6px;
+  display: inline-block;
+  transition: .3s;
+  position: relative;
+  top: -3px;
+  right: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF4500;
+}
+
+.painel .painel-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
