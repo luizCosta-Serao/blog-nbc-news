@@ -1,4 +1,11 @@
 <?php include('config.php') ?>
+<?php
+  // Sistema de loggout
+  if (isset($_GET['loggout'])) {
+    session_destroy();
+    header('Location: '.INCLUDE_PATH.'login');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +35,15 @@
         <li><a href="">Podcasts</a></li>
       </ul>
       <div class="header-actions">
-        <a href=""><img src="<?php echo INCLUDE_PATH; ?>/assets/login.svg" alt=""></a>
+        <?php
+          // Se não estiver logado, exibir botão para login
+          if (!@$_SESSION['login']) {
+        ?>
+          <a href="<?php echo INCLUDE_PATH; ?>login"><img src="<?php echo INCLUDE_PATH; ?>/assets/login.svg" alt=""></a>
+        <?php } else { // Caso esteja logado, exibir user e loggout ?>
+          <a href=""><?php echo $_SESSION['username'] ?></a>
+          <a class="btn-loggout" href="<?php echo INCLUDE_PATH ?>?loggout">Loggout</a>
+        <?php } ?>
         <a href=""><img src="<?php echo INCLUDE_PATH; ?>/assets/search.svg" alt=""></a>
       </div>
     </nav>
