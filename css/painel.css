@@ -52,3 +52,78 @@
   padding: 40px;
   border-radius: 10px;
 }
+
+.painel-content .painel-title {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 28px;
+  color: #2A2A2A;
+}
+
+.painel-content .painel-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #FF4500;
+}
+
+.painel-content form label {
+  display: block;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2A2A2A;
+}
+
+.painel-content form input,
+.painel-content form select {
+  width: 100%;
+  color: #2A2A2A;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  padding-left: 8px;
+  height: 40px;
+  outline: none;
+}
+
+.painel-content form textarea {
+  width: 100%;
+  color: #2A2A2A;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  padding-left: 8px;
+  height: 200px;
+  outline: none;
+  resize: none;
+}
+
+.painel-content form input:hover,
+.painel-content form input:focus {
+  border-color: #C31815;
+}
+
+.painel-content form input[type="submit"] {
+  background-color: #C31815;
+  color: #fff;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.painel-content form input[type="submit"]:hover {
+  opacity: .7;
+}
+

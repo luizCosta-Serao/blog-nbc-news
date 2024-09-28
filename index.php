@@ -55,8 +55,11 @@
   <?php
     // Página dinâmica
     $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+    $array_url = explode('/', $url);
     if (file_exists('pages/'.$url.'.php')) {
       include('pages/'.$url.'.php');
+    } else if ($array_url[0] === 'painel') {
+      include('pages/painel/'.$array_url[1].'.php');
     } else {
       include('pages/home.php');
     }
