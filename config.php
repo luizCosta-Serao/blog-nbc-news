@@ -7,6 +7,7 @@
   spl_autoload_register($autoload);
 
   define('INCLUDE_PATH', 'http://localhost/yume/');
+  define('BASE_DIR', __DIR__);
 
   define('HOST', 'localhost');
   define('USER', 'root');
