@@ -3,6 +3,7 @@ import Login from "./login.js";
 import PublicarPost from "./painel/publicar-post.js";
 import CadastrarCategoria from "./painel/cadastrar-categoria.js";
 import EditarPost from "./painel/editar-post.js";
+import EditarCategoria from "./painel/editar-categoria.js";
 
 // Class para funcionalidade de menu mobile
 const menu = new Menu('.header-menu', '.header-btn-menu');
@@ -15,9 +16,9 @@ login.loginAjax();
 // Class para publicar novo post/notícia no painel de controle
 const postForm = document.querySelector('#publicar-post-form');
 if (postForm) {
+  const publicarPost = new PublicarPost('#post-article', 'publicar-post.php', 'publicar-post-form');
+  publicarPost.publicarPostAjax();
 }
-const publicarPost = new PublicarPost('#post-article', 'publicar-post.php', 'publicar-post-form');
-publicarPost.publicarPostAjax();
 
 // Class para cadastrar nova categoria no painel de controle
 const registerCategory = document.querySelector('#cadastrar-categoria-form');
@@ -30,3 +31,7 @@ if (registerCategory) {
 // Class para editar post/notícia no painel de controle
 const editarPost = new EditarPost('#edit-post', 'editar-post.php', 'editar-post-form');
 editarPost.publicarPostAjax();
+
+// Class para editar categoria no painel de controle
+const editarCategoria = new EditarCategoria('#update-category', 'editar-categoria.php', 'update-categoria-form');
+editarCategoria.publicarPostAjax();
