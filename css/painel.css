@@ -210,6 +210,14 @@
   gap: 20px;
 }
 
+.painel-gerenciar .single-category .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding-left: 0;
+  gap: 20px;
+}
+
 .btn-excluir {
   background-color: #FF4500;
   color: #fff;

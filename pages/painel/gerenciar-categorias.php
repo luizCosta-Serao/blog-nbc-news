@@ -1,7 +1,7 @@
 <?php
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = MySql::connect()->prepare("DELETE FROM `posts` WHERE id = ?");
+    $sql = MySql::connect()->prepare("DELETE FROM `categories` WHERE id = ?");
     $sql->execute(array($id));
   }
   if ($_SESSION['login'] && $_SESSION['permission'] === 1) {
@@ -14,21 +14,18 @@
       <a href="<?php echo INCLUDE_PATH; ?>painel/gerenciar-categorias">Gerenciar Categorias</a>
     </aside>
     <div class="painel-gerenciar">
-      <h1>Gerenciar Posts</h1>
+      <h1>Gerenciar Categories</h1>
       <?php
-        $sql = MySql::connect()->prepare("SELECT * FROM `posts`");
+        $sql = MySql::connect()->prepare("SELECT * FROM `categories`");
         $sql->execute();
-        $posts = $sql->fetchAll();
-        foreach ($posts as $key => $value) {
+        $categories = $sql->fetchAll();
+        foreach ($categories as $key => $value) {
       ?>
-        <div class="single-post">
-          <h3><?php echo $value['title']; ?></h3>
-          <span><?php echo $value['category']; ?></span>
-          <img src="<?php echo INCLUDE_PATH; ?>uploads/<?php echo $value['cover'] ?>" alt="capa">
-          <p><?php echo substr($value['content'], 0, 40); ?></p>
+        <div class="single-category">
+          <h3><?php echo $value['name']; ?></h3>
           <div class="actions">
-            <a class="btn-excluir" href="<?php echo INCLUDE_PATH; ?>painel/gerenciar-posts?id=<?php echo $value['id']; ?>">Excluir</a>
-            <a class="btn-editar" href="<?php echo INCLUDE_PATH; ?>painel/editar-post?id=<?php echo $value['id']; ?>">Editar</a>
+            <a class="btn-excluir" href="<?php echo INCLUDE_PATH; ?>painel/gerenciar-categorias?id=<?php echo $value['id']; ?>">Excluir</a>
+            <a class="btn-editar" href="<?php echo INCLUDE_PATH; ?>painel/editar-categoria?id=<?php echo $value['id']; ?>">Editar</a>
           </div>
         </div>
       <?php } ?>
