@@ -8,17 +8,31 @@
 }
 
 .painel aside {
-  padding: 40px;
+  padding: 40px 0;
   background-color: #fff;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .painel aside a {
   text-decoration: none;
   font-size: 20px;
+  padding: 0 40px;
   font-family: "Nunito Sans", sans-serif;
   color: #2A2A2A;
   font-weight: 500;
+}
+
+.painel aside a::after {
+  content: '';
+  display: block;
+  width: 300px;
+  position: relative;
+  right: 40px;
+  height: 2px;
+  background-color: #eeeeee;
 }
 
 .painel aside a::before {
@@ -127,3 +141,93 @@
   opacity: .7;
 }
 
+.painel-gerenciar {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 40px;
+}
+
+.painel-gerenciar h1 {
+  grid-column: 1 / -1;
+  color: #2A2A2A;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 32px;
+}
+
+.painel-gerenciar h1::after {
+  content: '';
+  width: 100px;
+  height: 2px;
+  display: block;
+  background-color: #C31815;
+}
+
+.painel-gerenciar div {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: #eeeeee;
+  padding: 0 20px 40px 20px;
+  border-radius: 20px;
+}
+
+.painel-gerenciar div h3 {
+  color: #2A2A2A;
+  font-size: 24px;
+  font-family: "IBM Plex Serif", serif;
+  margin-bottom: 5px;
+}
+
+.painel-gerenciar div span {
+  color: #3a3a3a;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.painel-gerenciar div img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.painel-gerenciar div p {
+  color: #4a4a4a;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 0;
+}
+
+.painel-gerenciar .single-post .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding-left: 0;
+  gap: 20px;
+}
+
+.btn-excluir {
+  background-color: #FF4500;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn-editar {
+  background-color: #1E90FF;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
