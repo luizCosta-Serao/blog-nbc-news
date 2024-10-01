@@ -7,6 +7,7 @@
       <a href="<?php echo INCLUDE_PATH; ?>painel/publicar-post">Publicar Post</a>
       <a href="<?php echo INCLUDE_PATH; ?>painel/gerenciar-posts">Gerenciar Posts</a>
       <a href="<?php echo INCLUDE_PATH; ?>painel/cadastrar-categoria">Cadastrar Categoria</a>
+      <a href="<?php echo INCLUDE_PATH; ?>painel/gerenciar-categorias">Gerenciar Categorias</a>
     </aside>
     <div class="painel-content">
       <h2 class="painel-title">Edit Post</h2>
