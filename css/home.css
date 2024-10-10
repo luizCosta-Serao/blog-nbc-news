@@ -1,0 +1,232 @@
+.main-post {
+  max-width: 1300px;
+  margin: 40px auto 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.main-post-img img {
+  border-radius: 20px;
+  width: 750px;
+  object-fit: fill;
+  height: 500px;
+}
+
+.main-post-content span {
+  color: #C31815;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2%;
+  line-height: 210%;
+}
+
+.main-post-content h1 {
+  margin: 15px 0 20px 0;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #2A2A2A;
+  line-height: 120%;
+}
+
+.main-post-content p {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 165%;
+  font-size: 15px;
+  font-weight: 400;
+  color: #2A2A2A;
+}
+
+.breaking-news {
+  background-color: #C31815;
+  border-radius: 20px;
+  max-width: 1350px;
+  margin: 0 auto 40px auto;
+  padding: 10px 20px;
+}
+
+.breaking-news-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 60px;
+}
+
+.breaking-news-container a {
+  background-color: #fff;
+  color: #C31815;
+  border-radius: 20px;
+  width: 157px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.breaking-news-container p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 370px;
+}
+
+.posts-categories {
+  display: flex;
+  gap: 40px;
+  padding: 10px 20px;
+  background-color: #fff;
+  max-width: 872px;
+  border-radius: 20px;
+}
+
+.posts-categories p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2A2A2A;
+}
+
+.posts {
+  display: grid;
+  gap: 30px 40px;
+  max-width: 872px;
+  padding: 0;
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+}
+
+.single-post {
+  max-width: 438px;
+  list-style: none;
+}
+
+.single-post-img img {
+  width: 438px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+.single-post-content {
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 25px;
+}
+
+.single-post-content span {
+  color: #C31815;
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.single-post-content h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  color: #2A2A2A;
+  line-height: 120%;
+  font-weight: 600;
+  margin: 15px 0 17px 0;
+}
+
+.single-post-content p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  line-height: 175%;
+  color: #2A2A2A;
+  font-weight: 400;
+}
+
+.view-more {
+  border: 1px solid #C31815;
+  background-color: transparent;
+  color: #C31815;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 60px auto;
+  text-decoration: none;
+  max-width: 220px;
+  height: 60px;
+}
+
+.location-news {
+  max-width: 370px;
+  position: relative;
+  top: -20px;
+}
+
+.location-news h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  color: #2A2A2A;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.location-news form {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-news form h3 {
+  color: #141414;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.location-news form input[type="text"] {
+  border-radius: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  height: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: #141414;
+  padding-left: 15px;
+}
+
+.location-news form input[type="submit"] {
+  background-color: #C31815;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
